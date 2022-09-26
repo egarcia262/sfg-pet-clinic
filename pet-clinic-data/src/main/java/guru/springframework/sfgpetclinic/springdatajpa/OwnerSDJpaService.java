@@ -29,7 +29,6 @@ public class OwnerSDJpaService implements OwnerService {
     
 	@Override
 	public Set<Owner> findAll() {
-		// TODO Auto-generated method stub
 		Set<Owner> owners = new HashSet<>();		
 		ownerRepository.findAll().forEach(owners :: add);		
 		return owners;
@@ -37,32 +36,27 @@ public class OwnerSDJpaService implements OwnerService {
 
 	@Override
 	public Owner findById(Long id) {
-		// TODO Auto-generated method stub
 		return ownerRepository.findById(id).orElse(null);
 		
 	}
 
 	@Override
 	public Owner save(Owner object) {
-		// TODO Auto-generated method stub
 		return ownerRepository.save(object);
 	}
 
 	@Override
 	public void delete(Owner object) {
-		// TODO Auto-generated method stub
 		ownerRepository.delete(object);
 	}
 
 	@Override
 	public void deleteById(Long id) {
-		// TODO Auto-generated method stub
 		ownerRepository.deleteById(id);
 	}
 
 	@Override
 	public Owner findByLastName(String lastName) {
-		// TODO Auto-generated method stub
 		return ownerRepository.findByLastName(lastName);
 	}
 
